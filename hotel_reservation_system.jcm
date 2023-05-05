@@ -16,7 +16,7 @@ mas hotel_reservation_system {
 
 
     agent hotel1 : hotel_agent.asl {
-    	beliefs: rooms([["Hilton", "Ankara",5,300],["Anemon", "Ankara",4,250],["IzOt", "Izmir",3,230],["IzOt2", "Izmir",2,200],["IzOt3", "Izmir",1,150]])
+    	beliefs: rooms([["Hilton", "Ankara",5,300],["Anemon", "Ankara",4,250],["IzOt", "Izmir",3,230],["IzOt2", "Izmir",3,200],["IzOt3", "Izmir",1,150]])
 //    	location_rooms([["Hilton", "Ankara"],["Anemon", "Izmir"],["IzOt", "Izmir"],["IzOt2", "Izmir"],["IzOt3", "Izmir"]])
 //    	price_star([[5,300],[4,250],[3,230],[2,200],[1,150]])
 
@@ -24,7 +24,7 @@ mas hotel_reservation_system {
     }
     
     agent hotel2 : hotel_agent.asl {
-    	beliefs: rooms(["Anatolia", "Ankara", 5, 300],["Peracity", "Ankara", 4, 250],["AnkOt", "Ankara", 3, 230])
+    	beliefs: rooms([["Anatolia", "Ankara", 5, 300],["Peracity", "Ankara", 4, 250],["AnkOt", "Ankara", 3, 230]])
         focus: hotel.tools
     }
     agent client    : client_agent.asl {

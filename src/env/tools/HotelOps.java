@@ -3,15 +3,23 @@
 package tools;
 
 import cartago.*;
+import java.util.*;
 
 public class HotelOps extends Artifact {
+	private Dictionary<String,HashMap<Integer,Integer>> matches = new Hashtable<>();
+//	private ObsProperty myProp;
 	void init() {
-//		defineObsProperty("count", initialValue);
+//		linkToAgent("mediator_agent",receiverId);
 	}
 
 	@OPERATION
-	void check_available(String loc, int star, float price) {
-		
+	void add_list(String Name, String Location, int star, int price) {
+		matches.put(Name, new HashMap<>());
+		matches.get(Name).put(star, price);
+	}
+	@OPERATION
+	void print_list() {
+		System.out.println(matches);
 	}
 	@OPERATION
 	void inc() {
